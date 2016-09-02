@@ -7,9 +7,88 @@
 //
 
 #include <iostream>
+#include <string>
+
+using namespace std;
+
+int lengthOfQuiltBlock () {
+    int length;
+    
+    cout << "Enter the length of the quilt block: ";
+    cin >> length;
+    
+    while (length < 0 || length > 25) {
+        cout << "Your number must be between 0 and 25" << endl;
+        cout << "Enter the length of the quilt block: ";
+        cin >> length;
+    }
+    
+    return length;
+}
+
+int widthOfQuiltBlock () {
+    int width;
+    
+    cout << "Enter the width of the quilt block: ";
+    cin >> width;
+    
+    while (width < 0 || width > 25) {
+        cout << "Your number must be between 0 and 25" << endl;
+        cout << "Enter the width of the quilt block: ";
+        cin >> width;
+    }
+    
+    return width;
+}
+
+char evenColumnChar () {
+    char character;
+    
+    cout << "What character should the even columns be filled width? ";
+    cin >> character;
+    
+    return character;
+}
+
+char oddColumnChar () {
+    char character;
+    
+    cout << "What character should the odd columns be filled width? ";
+    cin >> character;
+    
+    return character;
+}
 
 int main(int argc, const char * argv[]) {
     // insert code here...
-    std::cout << "Hello, World!\n";
+    cout << "Welcome to the quilt maker :D\n\n";
+    
+    //Declare and initialize row and column variables of type const int
+    const int ROW = lengthOfQuiltBlock();
+    const int COLUMN = widthOfQuiltBlock();
+    
+    //Declare and initialize the evenChar and oddChar variables of type characters
+    char evenChar = evenColumnChar(), oddChar = oddColumnChar();
+    
+    //Declare a 2D array called quilt to be of size length and width specified by the usr
+    char quilt[ROW][COLUMN];
+    
+    //Fill the 2D array(quilt) && display it
+    for (int i = 0; i < ROW; i++) {
+        for (int j = 0; j < COLUMN; j++) {
+            quilt[i][j] = (j % 2 == 0) ? evenChar : oddChar;
+            cout << quilt[i][j];
+        }
+        cout << endl;
+    }
+    
+    //Display the 2D array(quilt)
+    //for (int i = 0; i < ROW; i++) {
+      //  for (int j = 0; j < COLUMN; j++) {
+        //    cout << quilt[i][j];
+      //  }
+    //    cout << endl;
+  //  }
+    
     return 0;
 }
