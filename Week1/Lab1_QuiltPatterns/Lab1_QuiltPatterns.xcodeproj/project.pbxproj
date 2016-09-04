@@ -246,6 +246,7 @@
 				730699081D79E8B800F9A197 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
