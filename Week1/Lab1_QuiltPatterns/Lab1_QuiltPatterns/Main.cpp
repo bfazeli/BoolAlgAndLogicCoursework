@@ -11,6 +11,12 @@
 
 using namespace std;
 
+/**
+ lengthOfQuiltBlock:    Asks the usr for the length of the quilt.
+ 
+ @return:       Returns the length of the quilt.
+ 
+ */
 int lengthOfQuiltBlock () {
     int length;
     
@@ -26,6 +32,12 @@ int lengthOfQuiltBlock () {
     return length;
 }
 
+/**
+ widthOfQuiltBlock:     Asks the user for the width of the quilt that'll be made.
+ 
+ @return:       Returns the width of the quilt.
+ 
+ */
 int widthOfQuiltBlock () {
     int width;
     
@@ -41,6 +53,12 @@ int widthOfQuiltBlock () {
     return width;
 }
 
+/**
+ evenColumnChar:    Asks the user what char should be filled in for the even portion of the quilt.
+ 
+ @return:       Returns the character that will be used for the evens.
+ 
+ */
 char evenColumnChar () {
     char character;
     
@@ -50,6 +68,13 @@ char evenColumnChar () {
     return character;
 }
 
+
+/**
+ oddColumnChar:     Asks the user what char should be filled in for the odd portion of the quild.
+ 
+ @return:       Returns the characer that will be used for the odd.
+ 
+ */
 char oddColumnChar () {
     char character;
     
@@ -81,14 +106,6 @@ int main(int argc, const char * argv[]) {
         }
         cout << endl;
     }
-    
-    //Display the 2D array(quilt)
-    //for (int i = 0; i < ROW; i++) {
-      //  for (int j = 0; j < COLUMN; j++) {
-        //    cout << quilt[i][j];
-      //  }
-    //    cout << endl;
-  //  }
     
     return 0;
 }
